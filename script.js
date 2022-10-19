@@ -17,6 +17,24 @@ const headphonesList = [
     price: 2327,
     rate: 4.5,
   },
+  {
+    img: "./assets/S852.png",
+    title: "Apple BYZ S852I",
+    price: 2927,
+    rate: 4.7,
+  },
+  {
+    img: "./assets/earpods1.png",
+    title: "Apple EarPads",
+    price: 2327,
+    rate: 4.5,
+  },
+  {
+    img: "./assets/earpods2.png",
+    title: "Apple EarPads",
+    price: 2327,
+    rate: 4.5,
+  },
 ];
 
 const headphoneswirelessList = [
@@ -48,13 +66,17 @@ window.addEventListener("DOMContentLoaded", () => {
   for (let i = 0; i < headphonesList.length; i++) {
     let headphone = document.createElement("div");
     headphone.classList.add("card");
-
-    // potentialBtnSortFirst.innerHTML = '<img src="./assets/img/top2.png">';
     headphone.innerHTML = `<img src="${headphonesList[i].img}">
-    <p>${headphonesList[i].title}</p>`;
-
+    <h3>${headphonesList[i].title}</h3>
+    <p class="price">${headphonesList[i].price}</p>`;
     headphones.appendChild(headphone);
   }
 
-  for (let i = 0; i < headphoneswirelessList.length; i++) {}
+  for (let i = 0; i < headphoneswirelessList.length; i++) {
+    let headphone = document.createElement("div");
+    headphone.classList.add("card");
+    headphone.innerHTML = `<img src="${headphoneswirelessList[i].img}">
+    <h3>${headphoneswirelessList[i].title}</h3>`;
+    wirelessheadphones.appendChild(headphone);
+  }
 });

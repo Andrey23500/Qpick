@@ -136,8 +136,9 @@ a {
 }
 
 .headphones__cards {
-  display: flex;
-  /* justify-content: space-between; */
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .card {
@@ -148,6 +149,7 @@ a {
   width: 350px;
   height: 407px;
   position: relative;
+  margin-bottom: 30px;
 }
 
 .card:last-child {
@@ -156,9 +158,30 @@ a {
 .card img {
   position: absolute;
   margin: auto;
-  /* width: 220px;
-  height: 237px; */
+  width: 220px;
+  height: 237px;
   top: 15;
   left: 0;
   right: 0;
+}
+.card h3 {
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 21px;
+  position: absolute;
+  top: 306px;
+  left: 22px;
+  right: 0;
+  bottom: 80px;
+}
+.price {
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 21px;
+  color: #ffa542;
+  position: absolute;
+  top: 306px;
+  left: 0;
+  right: 22px;
+  bottom: 80px;
 }
